@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var pickWord = function() {
+ return words[Math.floor(Math.random() * words.length)];
+};
+
+ var setupAnswerArray = function (word) {
+ 	for (var i = 0; i < words.length) {
+ 		answerArray[i] = "_";
+
+ 	}
+
+
+ };
+
+
+var showPlayerProgress = function (answerArray) {
+	alert("Your progress" +  alert.answerArray.join(" ");
+
+
+};
+
+
+
+
+var getGuess = function() {
+var guess =	prompt("Type your guess here");
+
+
+}
+
+
+
+var updateGameState = function (guess, word, answerArray) {
+
+
+}
+
+
+
+	var words = [
+	"Guess",
+	"Leave",
+	"Mouse",
+	"Cheese"
+
+	];
+
+	var word = pickWord();
+	var answerArray = setupAnswerArray(word);
+	var remainingLetters = word.length;
+
+  while (remainingLetters > 0) {
+  	showPlayerProgress(answerArray);
+  	var guess = getGuess();
+  	if (guess === null) {
+  		break;
+  	} else if (guess.length !== 1) {
+  		alert("Please enter a single letter.");
+  	} else {
+  		var correctGuesses = updateGameState(guess, word, answerArray);
+  		remainingLetters -= correctGuesses;
+  	}
+  }
+
+
+</script>
+
+</body>
+</html>

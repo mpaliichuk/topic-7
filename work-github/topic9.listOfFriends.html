@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jqurry</title>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+
+
+</head>
+<body>
+<h1>Hello world</h1>
+
+<script type="text/javascript">
+	var friends = ["Nico", "Mind", "Roman"];
+	for (var i = 0; i < 3; i++) {
+	//	$("body").hide(2000).fadeIn(2000).append("<p id = "friend">" + friends[i] + " smells!" + "</p>");
+	$("body").append("<p id="+"hideIt"  + i + ">" + friends[i] + "</p>");
+	$("#hideIt" + i ).hide(2000).fadeIn(2000);
+	}
+	$("h1").text("My friends");
+</script>
+
+
+</body>
+</html>
