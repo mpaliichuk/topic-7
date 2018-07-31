@@ -7,17 +7,13 @@
 
 <script type="text/javascript">
 	var areArraysSame = function (array, array2) {
-		for (var i = 0; i < array.length; i++)
+	var length = array2.length > array.length ? array2.length : array.length;	
+		for (var i = 0; i < length; i++)
 		 {
-			if (array[i] === array2[i]) {
-
+			if (array[i] === array2[i]) 
 				return true;
-			} else
-			{
-				return false;
-				
-			}
-			return "They aren't same";
+			else
+				return false;				
 		}
 	};
 
